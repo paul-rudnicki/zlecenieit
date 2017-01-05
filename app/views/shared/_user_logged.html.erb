@@ -1,0 +1,20 @@
+<%# if logged_in? %>
+<% if session[:user_id].present? %>
+	<div class="user-logged">
+		<div class="user-logged-options">
+			<span class="bold skin-font-color2">Zalogowany: </span><span class="bold skin-font-color12"><%= current_user.name %></span>
+			<ul>
+				<li><%= link_to "~Kokpit", panel_path, class: 'skin-font-color3 skin-color-hover2' %></li>
+				<li><%= link_to "~Wyloguj", panel_wyloguj_path, class: 'skin-font-color3 skin-color-hover2' %></li>
+			</ul>
+		</div>
+		<div class="logo-wrapp">
+			<img src="images/avatar/1.jpg" alt="profile">
+		</div>
+	</div>
+<% else %>
+	<ul class="user-menu bold">
+		<li><%= link_to "Zarejestruj się", panel_logowanie_path, class: 'skin-font-color2 skin-color-hover2' %></li>
+		<li><%= link_to "Zaloguj się", panel_logowanie_path, class: 'skin-font-color2 skin-color-hover2' %></li>
+	</ul>
+<% end %>

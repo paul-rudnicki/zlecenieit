@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zlecenie</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- favicon -->
+  <%= favicon_link_tag %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<!-- TOP WRAPPER -->
+		
+	<%= render 'shared/top' %>
+	
+	<!-- /TOP WRAPPER -->
+
+	<div class="clearfix"></div>
+
+	<!-- MAIN CONTENT -->
+
+	<section class="main-content">
+		<div class="center">
+		
+		<%= render 'shared/notice_alert' %>
+		
+			<!-- Sidebar -->
+		
+			<%= render 'shared/panel/sidebar' %>
+			
+			<!-- /Sidebar -->
+
+			<!-- Content -->
+			
+			<%= yield %>
+			
+			<!-- /Content -->
+			
+		</div>
+	</section>
+
+	<!-- /MAIN CONTENT -->
+
+	<div class="clearfix"></div>
+
+	<!-- BOTTOM -->
+
+	<%= render 'shared/bottom' %>
+
+	<!-- /BOTTOM -->
+
+	<div class="clearfix"></div>
+
+	<!-- FOOTER -->
+	
+	<%= render 'shared/footer' %>
+
+	<!-- /FOOTER -->
+
+</body>
+</html>
+

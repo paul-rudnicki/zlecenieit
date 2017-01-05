@@ -1,0 +1,20 @@
+<span class="font-18px bold main-title">Logowanie</span>
+
+<div class="one-third">
+	<span class="font-14px semibold main-subtitle">Dane do logowania</span>
+
+	<%= form_tag panel_sessions_path, {class: 'login-form'} do %>
+		<%= text_field_tag :email, nil, class: 'skin-background-color1 skin-font-color3', placeholder: 'Adres e-mail' %>
+		<%= password_field_tag :password, 'Zaloguj się', {class: 'skin-background-color1 skin-font-color3'}  %>
+		<%= submit_tag 'Zaloguj się', {class: 'skin-background-color7 skin-font-color2 skin-background-hover6'} %>
+	<% end %>
+
+</div>
+<div class="one-third">
+	<span class="font-14px semibold main-subtitle">Nowe konto?</span>
+	<a href="#" class="facebook-login skin-background-color6 skin-font-color2 skin-background-hover6 bold">Zarejestruj się</a>
+</div>
+<div class="one-third last">
+	<span class="font-14px semibold main-subtitle">Nie pamiętasz hasła?</span>
+	<a href="#" class="facebook-login skin-background-color12 skin-font-color2 skin-background-hover6 bold">Resetuj hasło</a>
+</div>

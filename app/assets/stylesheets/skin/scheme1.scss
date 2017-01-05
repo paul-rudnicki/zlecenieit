@@ -1,0 +1,359 @@
+.sidebar .services .photo1 { background:image-url("services/1.jpg") 50% 50% no-repeat; }
+.sidebar .services .photo2 { background:image-url("services/2.jpg") 50% 50% no-repeat; }
+
+body{ font:11px "OpenSansRegular", Arial, Helvetica,sans-serif; color:#4e4e4e; line-height:24px; height:100% !important;  padding: 90px 0 0 0; }
+
+/****************************************************************************
+1. COLORS
+****************************************************************************/
+
+.skin-font-color1 { color:#1d1d33; } /* main color */
+.skin-font-color2 { color:#fff; }
+.skin-font-color3 { color:#bdbdcf; }
+.skin-font-color4 { color:#eabf57; }
+.skin-font-color5 { color:#8e8ebc; }
+.skin-font-color6 { color:#4e4e4e; }
+.skin-font-color7 { color:#aaaaaa; }
+.skin-font-color8 { color:#493400; }
+.skin-font-color9 { color:#55a3d4; }
+.skin-font-color10 { color:#22c26a; }
+.skin-font-color11 { color:#767676; }
+.skin-font-color12 { color:#fdc900; }
+.skin-font-color13 { color:#686868; }
+.skin-font-color14 { color:#f94139; }
+.skin-font-color15 { color:#f4934c; }
+
+.skin-background-color1 { background-color:#1d1d33; } /* main color */
+.skin-background-color2 { background-color:#fdc900; } 
+.skin-background-color3 { background-color:#bdbdcf; }
+.skin-background-color4 { background-color:#fdce5a; }
+.skin-background-color5 { background-color:#ededed; }
+.skin-background-color6 { background-color:#3c5a98; }
+.skin-background-color7 { background-color:#22c26a; }
+.skin-background-color8 { background-color:#d80000; } 
+.skin-background-color9 { background-color:#55a3d4; } 
+.skin-background-color10 { background-color:#fff; }
+.skin-background-color11 { background-color:#c6c6d7; }
+.skin-background-color12 { background-color:#f94139; }
+.skin-background-color13 { background-color:#daa82d; }
+.skin-background-color14 { background-color:#f4934c; }
+.skin-background-color15 { background-color:#a74701; }
+.skin-background-color16 { background-color:#7a7a99; }
+.skin-background-color17 { background-color:#00578d; }
+.skin-background-color18 { background-color:#005727; }
+
+.skin-border-color1 { border-color:#1d1d33; } /* main color */
+.skin-border-color2 { border-color:#fff; } 
+.skin-border-color3 { border-color:#ededed; }
+.skin-border-color4 { border-color:#c6c6d7; }
+.skin-border-color5 { border-color:#bdbdcf; }
+.skin-border-color6 { border-color:#55a3d4; }
+.skin-border-color7 { border-color:#22c26a; }
+
+/****************************************************************************
+2. HOVERS
+****************************************************************************/
+
+.skin-color-hover1:hover { color:#1d1d33; /* main color */
+-webkit-transition: color 300ms linear;
+-moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+-ms-transition: color 300ms linear;
+transition: color 300ms linear;
+}
+
+.skin-color-hover2:hover { color:#eabf57;
+-webkit-transition: color 300ms linear;
+-moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+-ms-transition: color 300ms linear;
+transition: color 300ms linear;
+}
+
+.skin-color-hover3:hover { color:#fdce5a;
+-webkit-transition: color 300ms linear;
+-moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+-ms-transition: color 300ms linear;
+transition: color 300ms linear;
+}
+
+.skin-color-hover4:hover { color:#55a3d4;
+-webkit-transition: color 300ms linear;
+-moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+-ms-transition: color 300ms linear;
+transition: color 300ms linear;
+}
+
+.skin-color-hover5:hover { color:#bdbdcf;
+-webkit-transition: color 300ms linear;
+-moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+-ms-transition: color 300ms linear;
+transition: color 300ms linear;
+}
+
+.skin-color-hover6:hover { color:#fff;
+-webkit-transition: color 300ms linear;
+-moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+-ms-transition: color 300ms linear;
+transition: color 300ms linear;
+}
+
+.skin-color-hover7:hover { color:#f94139;
+-webkit-transition: color 300ms linear;
+-moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+-ms-transition: color 300ms linear;
+transition: color 300ms linear;
+}
+
+.skin-color-hover8:hover { color:#22c26a;
+-webkit-transition: color 300ms linear;
+-moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+-ms-transition: color 300ms linear;
+transition: color 300ms linear;
+}
+
+.skin-background-hover1:hover { background-color:#1d1d33; /* main color */
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover2:hover { background-color:#fff; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover3:hover { background-color:#ffe4a3; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover4:hover { background-color:#fdce5a; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover5:hover { background-color:#493400; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover6:hover { background-color:#55a3d4; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover7:hover { background-color:#c6c6d7; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover8:hover { background-color:#bdbdcf; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover9:hover { background-color:#85c5ed; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover10:hover { background-color:#6cd89c; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-background-hover11:hover { background-color:#41414e; 
+-webkit-transition: background-color 300ms linear;
+-moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+-ms-transition: background-color 300ms linear;
+transition: background-color 300ms linear;
+}
+
+.skin-border-hover1:hover { border-color:#1d1d33; } /* main color */
+
+/****************************************************************************
+3. OTHERS
+****************************************************************************/
+
+.menu-current { background-color:#fff; }
+.mobile-menu .menu-current { background:none; color:#f94139; }
+.panel-menu-current { background:#bdbdcf; }
+.show-enabled { color:#fdce5a !important; }
+.bottom-detail1 { border-color: transparent transparent transparent #ffffff; }
+.bottom-detail2 { border-color: transparent transparent #ffffff transparent; }
+
+.list li:nth-child(odd) { background-color:#ededed; }
+
+.skin-mask-color1 { background: rgba(29,29,51,.8); }
+
+.add-offer-detal { border-color: transparent #ededed transparent transparent }
+
+/****************************************************************************
+4. TOOLTIP
+****************************************************************************/
+
+#tooltip { text-align: center; color: #fff; background: #1d1d33; position: absolute; z-index: 100; padding: 15px; }
+#tooltip:after  { width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #111; content: ''; position: absolute; left: 50%; bottom: -10px; margin-left: -10px; }
+#tooltip.top:after { border-top-color: transparent; border-bottom: 10px solid #111; top: -20px; bottom: auto; }
+#tooltip.left:after { left: 10px; margin: 0; }
+#tooltip.right:after { right: 10px; left: auto; margin: 0; }
+
+
+
+@font-face {
+    font-family: 'EntypoRegular';
+    src: font-url('entypo-webfont.eot');
+    src: font-url('entypo-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('entypo-webfont.woff') format('woff'),
+    font-url('entypo-webfont.ttf') format('truetype'),
+    font-url('entypo-webfont.svg#EntypoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: font-url('OpenSans-Light-webfont.eot');
+    src: font-url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-Light-webfont.woff') format('woff'),
+    font-url('OpenSans-Light-webfont.ttf') format('truetype'),
+    font-url('OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansLightItalic';
+    src: font-url('OpenSans-LightItalic-webfont.eot');
+    src: font-url('OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-LightItalic-webfont.woff') format('woff'),
+    font-url('OpenSans-LightItalic-webfont.ttf') format('truetype'),
+    font-url('OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: font-url('OpenSans-Regular-webfont.eot');
+    src: font-url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-Regular-webfont.woff') format('woff'),
+    font-url('OpenSans-Regular-webfont.ttf') format('truetype'),
+    font-url('OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: font-url('OpenSans-Italic-webfont.eot');
+    src: font-url('OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-Italic-webfont.woff') format('woff'),
+    font-url('OpenSans-Italic-webfont.ttf') format('truetype'),
+    font-url('OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: font-url('OpenSans-Semibold-webfont.eot');
+    src: font-url('OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-Semibold-webfont.woff') format('woff'),
+    font-url('OpenSans-Semibold-webfont.ttf') format('truetype'),
+    font-url('OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansSemiboldItalic';
+    src: font-font-url('OpenSans-SemiboldItalic-webfont.eot');
+    src: font-font-url('OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+    font-font-url('OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+    font-font-url('OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+    font-font-url('OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: font-url('OpenSans-Bold-webfont.eot');
+    src: font-url('OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-Bold-webfont.woff') format('woff'),
+    font-url('OpenSans-Bold-webfont.ttf') format('truetype'),
+    font-url('OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansBoldItalic';
+    src: font-url('OpenSans-BoldItalic-webfont.eot');
+    src: font-url('OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-BoldItalic-webfont.woff') format('woff'),
+    font-url('OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+    font-url('OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansExtrabold';
+    src: font-url('OpenSans-ExtraBold-webfont.eot');
+    src: font-url('OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-ExtraBold-webfont.woff') format('woff'),
+    font-url('OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+    font-url('OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansExtraboldItalic';
+    src: font-url('OpenSans-ExtraBoldItalic-webfont.eot');
+    src: font-url('OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+    font-url('OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+    font-url('OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

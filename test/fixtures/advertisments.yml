@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content: MyText
+  price: MyString
+  status: false
+  closed: false
+  winner: 1
+  realization: MyString
+  ended_date: 2017-01-04 22:01:59
+  slug: MyString
+  user: one
+  category: one
+  geolocation: one
+
+two:
+  title: MyString
+  content: MyText
+  price: MyString
+  status: false
+  closed: false
+  winner: 1
+  realization: MyString
+  ended_date: 2017-01-04 22:01:59
+  slug: MyString
+  user: two
+  category: two
+  geolocation: two
