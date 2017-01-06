@@ -1,26 +1,5 @@
 <div class="one-fourth main-sidebar">
-	<div class="sidebar">
-		<span class="font-18px skin-font-color1 bold">Geolokalizacja</span>
-		
-		<ul class="bold-italic sidebar-geo">
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty cała Polska (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty dolnoślaskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty ślaskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty kujawsko-pormorskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty lubelskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty łódzkie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty małopolskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty mazowieckie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty opolskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty podkarpackie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty podlaskie (<span class="skin-font-color9">16</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty pomorskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty śląskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty świętokrzyskie (<span class="skin-font-color9">320</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty warmińsko-mazurskie (<span class="skin-font-color9">4220</span>)</a></li>
-			<li class="skin-border-color3"><a href="#" class="skin-font-color6 skin-color-hover4">Oferty zachodniopomorskie (<span class="skin-font-color9">320</span>)</a></li>
-		</ul>
-	</div>
+
 	<div class="sidebar">
 		<span class="font-18px skin-font-color1 bold">Wyszukiwarka</span>
 		<div class="search-line line-before skin-background-color3"></div>
@@ -31,6 +10,21 @@
 		<div class="search-line line-after skin-background-color3"></div>
 		<a href="#" class="search-more skin-font-color3 skin-color-hover4">Wyszukiwanie zaawansowane</a>
 	</div>
+
+	<div class="sidebar">
+
+		<span class="font-18px skin-font-color1 bold">Geolokalizacja</span>
+		
+		<ul class="bold-italic sidebar-geo">
+			<% geolocations_sidebar.each do |geolocation| %>
+				<li class="skin-border-color3">
+					<%= link_to geolocation_path(geolocation), class: 'skin-font-color6 skin-color-hover4' do %><%= geolocation.name %> (<span class="skin-font-color9"><%= geolocation.advertisments.count %></span>)
+					<% end %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+	
 	<div class="sidebar">
 		<span class="font-18px skin-font-color1 bold">Usługi</span>
 		<ul class="services bold-italic">

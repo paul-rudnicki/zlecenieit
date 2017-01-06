@@ -1,0 +1,18 @@
+<% if @advertisments.any? %>
+	<ul class="ad-list">
+			<li class="ad-prev">
+				<span class="skin-font-color9 semibold font-12px">Zlecenie: </span><span class="semibold font-12px">Wdrozenie systemu API z fotolii do strony firmowe</span>
+				<div class="meta-info">
+					<span class="bold">Kategoria: </span><span class="second-span">Strona www</span>
+					<span class="bold">Lokalizacja: </span><span class="second-span">Cała Polska</span>
+					<span class="bold">Budżet: </span><span class="second-span">2500zł</span> 	
+					<span class="bold">Zakończone: </span><span class="second-span">15.04.2014</span>
+					<span class="bold">Ilość ofert: </span><span class="second-span">3</span> 
+					<span class="bold">Zwycięzca: </span><span class="second-span">wtxinc</span>
+				</div>
+				<a href="#" class="button skin-font-color2 skin-background-color9 skin-background-hover1 bold">Zobacz ogłoszenie</a>
+			</li>
+		</ul>
+<% else %>
+	<%= render 'empty' %>
+<% end %>

@@ -30,10 +30,10 @@
 						<%= link_to "/ Aktywne", panel_oferty_path, class: 'skin-font-color1 skin-background-hover8' %>
 					</li>
 					<li>
-						<%= link_to "/ Oczekujące na zwycięzce", panel_oferty_path(status: 'waiting_winner'), class: 'skin-font-color1 skin-background-hover8' %>
+						<%= link_to "/ Wygrane", panel_oferty_path(status: 'won'), class: 'skin-font-color1 skin-background-hover8' %>
 					</li>
 					<li>
-						<%= link_to "/ Wygrane", panel_oferty_path(status: 'won'), class: 'skin-font-color1 skin-background-hover8' %>
+						<%= link_to "/ Zakończone", panel_oferty_path(status: 'ended'), class: 'skin-font-color1 skin-background-hover8' %>
 					</li>
 				</ul>
 			</li>

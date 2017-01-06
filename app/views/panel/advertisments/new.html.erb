@@ -1,0 +1,51 @@
+<div class="three-fourth main-text panel-content last">
+	<span class="font-18px skin-font-color1 bold">Dodaj ogłoszenie</span>
+	
+	<%= render 'validation_errors', object: @advertisment %>
+
+	<%= form_for [:panel, @advertisment], class: 'add-new-commission' do |f| %>
+		<span class="skin-font-color15 font-14px semibold">ZLECENIE:</span><span class="font-14px semibold main-subtitle">Tytuł ogłoszenia</span>
+		<span class="panel-content-error skin-background-color12 skin-font-color2 bold error-1">Podaj tytuł</span>
+		<%= f.text_field :title, class: 'skin-background-color1 skin-font-color3', placeholder: 'Tytuł ogłoszenia' %>
+		<span class="font-14px semibold main-subtitle">Treść ogłoszenia</span>
+		<span class="panel-content-error skin-background-color12 skin-font-color2 bold error-2">Podaj treść ogłoszenia</span>
+		<%= f.text_area :content, class: 'skin-background-color1 skin-font-color3', placeholder: 'Treść ogłoszenia' %>		
+		<div class="skin-background-color5 line-break"></div>
+		<div class="one-third">
+			<span class="font-14px semibold main-subtitle">Kategoria</span>
+			<span class="panel-content-error skin-background-color12 skin-font-color2 bold error-3">Wybierz pole</span>
+			<%= select("advertisment", "category_id", @categories.collect {|c| [ c.name, c.id ] }, {prompt: 'Wybierz z listy'}, class: 'skin-background-color1 skin-font-color3') %>
+			<%#= f.collection_select(:category_ids, @categories, :id, :name, {prompt: 'Wybierz z listy'}, {class: 'skin-background-color1 skin-font-color3'}) %>
+		</div>
+		<div class="one-third">
+			<span class="font-14px semibold main-subtitle">Lokalizacja</span>
+			<span class="panel-content-error skin-background-color12 skin-font-color2 bold error-4">Wybierz pole</span>
+			<%= select("advertisment", "geolocation_id", @geolocations.collect {|g| [ g.name, g.id ] }, {prompt: 'Wybierz z listy'}, class: 'skin-background-color1 skin-font-color3') %>
+			<%#= f.collection_select(:geolocation_ids, @geolocations, :id, :name, {:prompt => 'Wybierz z listy'}, {class: 'skin-background-color1 skin-font-color3'}) %>
+		</div>
+		<div class="one-third last">
+			<span class="font-14px semibold main-subtitle">Budżet</span>
+			<span class="panel-content-error skin-background-color12 skin-font-color2 bold error-5">Wybierz pole</span>
+			<%= f.select :price, [['50zł - 300zł', '50-300'], ['301zł - 1000zł', '301-1000'], ['1001zł - 3000zł', '1001-3000'], ['3001zł - 10000zł', '3001-10000'], ['powyżej 10000zł', '10000+']], {prompt: 'Wybierz z listy'}, {class: 'skin-background-color1 skin-font-color3' }%>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<div class="one-third">
+			<span class="font-14px semibold main-subtitle">Czas trwania</span>
+			<span class="panel-content-error skin-background-color12 skin-font-color2 bold error-7">Wybierz pole</span>
+			<%= f.select :realization, [['7 dni', 7], ['14 dni', 14], ['21 dni', 21], ['30 dni', 30], ['60 dni', 60]], {prompt: 'Wybierz z listy'}, {class: 'skin-background-color1 skin-font-color3' }%>
+		</div>
+		
+		<div class="skin-background-color5 line-break"></div>
+		
+		<div class="submit">
+			<%= f.submit "Dodaj ogłoszenie", class: 'skin-background-color12 skin-font-color2 skin-background-hover6 font-11px bold' %>
+			<div class="submit-text">
+				<span class="bold">Dodając akceptujesz </span><a href="#" class="bold skin-font-color14 skin-color-hover1">regulamin</a><span class="bold">.</span>
+			</div>
+		</div>
+		
+	<% end %>
+	
+</div>

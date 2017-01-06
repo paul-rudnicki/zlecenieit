@@ -11,7 +11,7 @@ class Panel::SessionsController < Panel::ApplicationController
   	@user = User.find_by_email(params[:email]).try(:authenticate, params[:password])
   	if @user
   		session[:user_id] = @user.id
-  		redirect_to panel_path, notice: 'Poprawnie zalogowanio do panelu'
+  		redirect_to panel_kokpit_path, notice: 'Poprawnie zalogowanio do panelu'
   	else
   		flash[:alert] = 'Prosimy o podanie prawidłowego e-mail i hasła'
   		redirect_to panel_logowanie_path

@@ -1,0 +1,21 @@
+<% if @advertisments.any? %>
+	<ul class="ad-list">
+		<% @advertisments.each do |advertisment| %>
+		<li class="ad-prev">
+			<span class="skin-font-color9 semibold font-12px">Zlecenie: </span><span class="semibold font-12px"><%= advertisment.title %></span>
+			<div class="meta-info">
+				<span class="bold">Kategoria: </span><span class="second-span"><%= advertisment.category.name %></span>
+				<span class="bold">Lokalizacja: </span><span class="second-span"><%= advertisment.geolocation.name %></span>
+				<span class="bold">Budżet: </span><span class="second-span"><%= advertisment.price %> zł</span> 	
+				<span class="bold">Wystawione: </span><span class="second-span"><%= date_issue advertisment.created_at %></span> 
+				<span class="bold">Do końca: </span><span class="second-span"><%= days_to_left advertisment %></span>
+				<span class="bold">Ilość ofert: </span><span class="second-span"><%= advertisment.offers.count %></span> 
+			</div>
+			<a href="#" class="button skin-font-color2 skin-background-color9 skin-background-hover1 bold">Zobacz ogłoszenie</a>
+			<%= link_to "Wycofaj ofertę", panel_offer_path(advertisment.offers.first.id), method: :delete, class: 'button skin-font-color2 skin-background-color3 skin-background-hover1 bold' %>
+		</li>
+		<% end %>
+	</ul>
+<% else %>
+	<%= render 'empty' %>
+<% end %>

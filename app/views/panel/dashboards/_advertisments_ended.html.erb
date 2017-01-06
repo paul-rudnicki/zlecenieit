@@ -5,17 +5,13 @@
 				<span class="skin-font-color9 semibold font-12px">Zlecenie: </span><span class="semibold font-12px"><%= advertisment.title %></span>
 				<div class="meta-info">
 					<span class="bold">Kategorie: </span><span class="second-span">
-					<% advertisment.categories.each do |category| %>
-						<%= category.name %>
-					<% end %>
+					<%= advertisment.category.name %>
 					</span>
 					<span class="bold">Lokalizacja: </span><span class="second-span">
-						<% advertisment.geolocations.each do |geolocation| %>
-							<%= geolocation.name %>
-						<% end %>
+						<%= advertisment.geolocation.name %>
 					</span>
-					<span class="bold">Budżet: </span><span class="second-span"><%= advertisment.price %>zł</span> 
-					<span class="bold">Zakończone: </span><span class="second-span"><%= advertisment.ended.strftime('%Y-%m-%d') %></span> 
+					<span class="bold">Budżet: </span><span class="second-span"><%= advertisment.price %> zł</span> 
+					<span class="bold">Zakończone: </span><span class="second-span"><%= advertisment.ended_date.strftime('%Y-%m-%d') %></span>
 				</div>
 				<a href="#" class="button skin-font-color2 skin-background-color9 skin-background-hover1 bold">Zobacz ogłoszenie</a>
 			</li>

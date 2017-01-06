@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-  get '/panel' => 'panel/dashboards#cockpit'
+  # get 'geolocations/show'
+
   root 'pages#home'
 
+  resources :geolocations, only: [:show]
+
+  get '/panel' => 'panel/dashboards#cockpit'
+  
   namespace :panel do
     
     get '/logowanie' => 'sessions#new'
@@ -15,7 +20,14 @@ Rails.application.routes.draw do
     get '/ustawienia' => 'dashboards#settings'
     get '/weryfikacja' => 'dashboards#verify'
 
+    get '/dodaj-ogloszenie' => 'advertisments#new'
+
+    # get '/zakoncz' => 'dashboards#finish'
+
     resources :sessions, only: [:new, :create, :destroy]
+    resources :advertisments, only: [:new, :create, :edit, :update]
+    resources :offers, only: [:destroy]
+
   end
 
 

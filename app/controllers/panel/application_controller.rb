@@ -4,11 +4,11 @@ class Panel::ApplicationController < ApplicationController
 
 	before_action :authorize
 
-	helper_method :current_user
+	# helper_method :current_user
 
-	def current_user
-		@current_user ||= User.find(session[:user_id]) if session[:user_id]
-	end
+	# def current_user
+	# 	@current_user ||= User.find(session[:user_id]) if session[:user_id]
+	# end
 
 	def authorize
 		unless current_user

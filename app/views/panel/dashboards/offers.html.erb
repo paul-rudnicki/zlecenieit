@@ -1,2 +1,29 @@
-<h1>Panel::Dashboards#offers</h1>
-<p>Find me in app/views/panel/dashboards/offers.html.erb</p>
+<div class="three-fourth main-text panel-content last">
+	
+	<span class="font-18px skin-font-color1 bold"><%= @title %></span>
+	
+	<%
+	case @layout
+	when 'ended' %>
+		<%= render 'offers_ended', object: @advertisments %>
+	<% when 'won' %>
+		<%= render 'offers_won', object: @advertisments %>
+	<% else %>
+		<%= render 'offers_active', object: @advertisments %>
+	<% end %>
+
+	<%= paginate @advertisments %>
+	
+	 <div class="pagination">
+		<ul>	
+			<li><a href="#" class="bold-italic skin-font-color6 skin-color-hover4">Poprzednia strona</a></li>
+			<li><a href="#" class="skin-background-color9 skin-font-color2 radious-5px">1</a></li>
+			<li><a href="#" class="skin-background-color1 skin-font-color2 radious-5px skin-background-hover6">2</a></li>
+			<li><a href="#" class="skin-background-color1 skin-font-color2 radious-5px skin-background-hover6">3</a></li>
+			<li><a href="#" class="skin-background-color1 skin-font-color2 radious-5px skin-background-hover6">4</a></li>
+			<li><a href="#" class="skin-background-color1 skin-font-color2 radious-5px skin-background-hover6">120</a></li>
+			<li><a href="#" class="bold-italic skin-font-color6 skin-color-hover4">Następna strona</a></li>
+		</ul>
+	  </div>
+	
+</div>
