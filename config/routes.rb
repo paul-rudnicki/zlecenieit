@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
 
-  # get 'geolocations/show'
+  # get 'categories/show'
+
+  # get 'geolocations/show' as: 'kategoria'
 
   root 'pages#home'
 
-  resources :geolocations, only: [:show]
+
+  resources :categories, only: [:show], :path => 'kategoria'
+  resources :geolocations, only: [:show], :path => 'lokalizacja'
 
   get '/panel' => 'panel/dashboards#cockpit'
+
   
   namespace :panel do
     

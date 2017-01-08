@@ -4,14 +4,14 @@
 			<%= link_to root_path do %>
 				<%= image_tag('logo.png', alt: 'logo', class: 'logo') %>
 			<% end %>
-			<ul class="logo-menu">
+			<!-- <ul class="logo-menu">
 				<li>
 					<a href="#" class="skin-font-color4 skin-color-hover2 bold">Zlecenia</a>
 				</li>
 				<li><a href="#" class="skin-font-color3 skin-color-hover2">Usługi</a></li>
 				<li><a href="#" class="skin-font-color3 skin-color-hover2">Praca</a></li>
 				<li><a href="#" class="skin-font-color3 skin-color-hover2">Współpraca</a></li>
-			</ul>
+			</ul> -->
 
 			<%= render 'shared/user_logged' %>	
 			
@@ -20,14 +20,29 @@
 	<div class="top-menu skin-background-color3">
 		<div class="center">
 			<ul class="choose skin-border-color2">
-				<li><a href="#" class="skin-font-color1 skin-background-hover2 menu-current">Strona Główna</a></li>
-				<li><a href="#" class="skin-font-color1 skin-background-hover2">Strony internetowe</a></li>
-				<li><a href="#" class="skin-font-color1 skin-background-hover2">Grafika</a></li>
-				<li><a href="#" class="skin-font-color1 skin-background-hover2">Aplikacje</a></li>
-				<li><a href="#" class="skin-font-color1 skin-background-hover2">Administracja, wdrożenia</a></li>
-				<li><a href="#" class="skin-font-color1 skin-background-hover2">Prace edytorskie</a></li>
-				<li><a href="#" class="skin-font-color1 skin-background-hover2">Marketing, reklama</a></li>
-				<li><a href="#" class="skin-font-color1 skin-background-hover2">Pozostałe</a></li>
+				<li><%= link_to "Strona Główna", root_path, class: 'skin-font-color1 skin-background-hover2 menu-current' %>
+				</li>
+				<li>
+					<%= link_to "Strony internetowe", category_path('strony-internetowe'), class: 'skin-font-color1 skin-background-hover2' %>
+				</li>
+				<li>
+					<%= link_to "Grafika", category_path('grafika'), class: 'skin-font-color1 skin-background-hover2' %>
+				</li>
+				<li>
+					<%= link_to "Aplikacje", category_path('aplikacje'), class: 'skin-font-color1 skin-background-hover2' %>
+				</li>
+				<li>
+					<%= link_to "Administracja, wdrożenia", category_path('administracja-wdrozenia'), class: 'skin-font-color1 skin-background-hover2' %>
+				</li>
+				<li>
+					<%= link_to "Prace edytorskie", category_path('prace-edytorskie'), class: 'skin-font-color1 skin-background-hover2' %>
+				</li>
+				<li>
+					<%= link_to "Marketing, reklama", category_path('marketing-reklama'), class: 'skin-font-color1 skin-background-hover2' %>
+				</li>
+				<li>
+					<%= link_to "Pozostałe", category_path('pozostale'), class: 'skin-font-color1 skin-background-hover2' %>
+				</li>
 			</ul>
 			<ul class="buttons">
 				<li><a href="#" class="skin-font-color2 skin-background-color9 skin-background-hover2 skin-color-hover1 bold choose-mobile-button">Główne menu</a></li>

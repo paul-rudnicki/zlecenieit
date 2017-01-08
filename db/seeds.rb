@@ -21,13 +21,24 @@ user = User.create!(
 # 	password: 'password'
 # )
 
+cats =  [
+ "Strony internetowe",
+ "Grafika",
+ "Aplikacje",
+ "Administracja, wdrożenia",
+ "Prace edytorskie",
+ "Marketing, reklama", 
+ "Pozostałe"
+]
 
+cats.each do |n|
+	@category = Category.create(
+			name: n
+		)
+end
 
 10.times do
 	cat_name = Faker::Lorem.word.capitalize
-	category = Category.create(
-		name: cat_name
-	)
 
 	city = Faker::Address.city
 	geolocation = Geolocation.create(
@@ -41,7 +52,7 @@ user = User.create!(
 		price: Faker::Commerce.price,
 		user: user,
 		realization: 14,
-		category: category,
+		category: @category,
 		geolocation: geolocation
 	)
 
