@@ -1,5 +1,5 @@
 <%# if logged_in? %>
-<% if session[:user_id].present? %>
+<% if current_user.present? %>
 	<div class="user-logged">
 		<div class="user-logged-options">
 			<span class="bold skin-font-color2">Zalogowany: </span><span class="bold skin-font-color12"><%= current_user.name %></span>
@@ -9,7 +9,7 @@
 			</ul>
 		</div>
 		<div class="logo-wrapp">
-			<!-- <img src="images/avatar/1.jpg" alt="profile"> -->
+			<%= image_tag "avatar/#{current_user.avatar}.jpg", data: {alt: "avatar"} %>
 		</div>
 	</div>
 <% else %>

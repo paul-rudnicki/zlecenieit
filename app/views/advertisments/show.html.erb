@@ -1,0 +1,76 @@
+<span class="font-18px skin-font-color15 bold">Zlecenie: </span><span class="font-18px skin-font-color1 bold"><%= @advertisment.title %></span>
+<span class="skin-font-color5 after-span bold">Kategoria: <a href="#" class="skin-font-color5 font"><%= @advertisment.category.name %></a></span>
+
+<div class="offer-content">				
+	<div class="two-third">
+		<p><%= @advertisment.content %></p>
+									
+		<span class="bold span-title">Oferty:</span>
+		
+		<ul class="offers">
+		
+			<% if @advertisment.offers.count == 0 %>
+
+			<li class="skin-border-color3 before-make-offer-box">
+				<p>Aktualnie brak ofert.<span class="bold skin-font-color9"> Bądź pierwszy!</span></p>
+			</li>
+				
+			<% end %>
+
+			<% @advertisment.offers.each do |offer| %>
+				
+				<li class="skin-border-color3">
+					<div class="user">
+						<div class="user-info">
+							<%= image_tag "avatar/#{offer.user.avatar}.jpg", data: {alt: 'profile'} %>
+							<%= user_verify offer.user %>
+						</div>
+						<div class="user-content">
+							<a href="#" class="bold skin-font-color6 skin-color-hover4"><%= offer.user.name %></a>
+							<p><%= offer.content %></p>
+							<ul>
+								<li><span class="bold">Kwota:</span> <%= offer.price %> zł</li>
+								<li><span class="bold">Czas realizacji:</span> <%= offer.realization %></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			
+			<% end %>
+
+			<% if current_user %>
+				
+				<% if current_user.id != @advertisment.user.id %>
+					
+					<% if ! is_user_offered @advertisment.offers %>
+						
+						<li class="skin-border-color3">
+							<div class="user">
+								<div class="user-info">
+									<%= image_tag "avatar/#{current_user.avatar}.jpg", data: {alt: "profile"} %>
+								</div>
+								<div class="user-content skin-background-color5 add-offer">
+										<form method="post" class="add-offer-form">
+											<textarea type="text" class="skin-font-color6 font font-11px bold" placeholder="Treść ogłoszenia"></textarea>
+											<div class="one-half">
+												<input type="text" class="skin-font-color6 font font-11px bold" placeholder="Kwota: do uzgodnienia">
+											</div>
+											<div class="one-half last">
+												<input type="text" class="skin-font-color6 font font-11px bold" placeholder="Termin realizacji: do uzgodnienia">
+											</div>
+											<input class="skin-background-color1 skin-background-hover4 skin-color-hover1 skin-font-color2 semibold font-11px" type="submit" value="Złóż oferte" />
+										</form>
+								</div>
+							</div>
+						</li>
+
+					<% end %>
+				<% end %>
+			<% end %>
+
+		</ul>
+	</div>
+
+	<%= render 'shared/advertisment_sidebar' %>
+
+</div>

@@ -13,13 +13,13 @@ user = User.create!(
 	password: 'password'
 )
 
-# user2 = User.create!(
-# 	name: 'Tomasz',
-# 	surname: 'Nowacki',
-# 	login: 'tomasz',
-# 	email: 'tomasz@gmail.com',
-# 	password: 'password'
-# )
+user2 = User.create!(
+	name: 'Tomasz',
+	surname: 'Nowacki',
+	email: 'tomasz@gmail.com',
+	password: 'password',
+	avatar: 2
+)
 
 cats =  [
  "Strony internetowe",
@@ -48,7 +48,7 @@ end
 	# end_date = Time.now + rand(2..30).days
 	advertisment = Advertisment.create(
 		title: Faker::Name.title,
-		content: Faker::Lorem.paragraphs,
+		content: Faker::Lorem.paragraph(3),
 		price: Faker::Commerce.price,
 		user: user,
 		realization: 14,
@@ -57,7 +57,7 @@ end
 	)
 
 	offer = Offer.create(
-		content: Faker::Lorem.paragraphs,
+		content: Faker::Lorem.paragraph(2),
 		price: Faker::Commerce.price,
 		realization: Faker::Date.forward,
 		user: user,
