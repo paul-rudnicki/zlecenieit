@@ -11,13 +11,14 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
+  get '/rejestracja' => 'users#new'
 
   resources :categories, only: [:show], :path => 'kategoria'
   resources :geolocations, only: [:show], :path => 'lokalizacja'
   resources :advertisments, only: [:show], :path => 'zlecenie' do
     resources :offers, only: [:new, :create]
   end
-  resources :users, only: [:show], :path => 'uzytkownik'
+  resources :users, only: [:show, :new, :create]
 
   get '/panel' => 'panel/dashboards#cockpit'
 

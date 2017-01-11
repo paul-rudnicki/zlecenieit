@@ -1,0 +1,25 @@
+<span class="font-18px bold main-title">Rejestracja</span>
+
+<%= form_for @user, class: 'register-form' do |f| %>
+	<div class="one-fourth">
+		<p>
+		Morbi ipsum nunc, dictum nec lacinia a, rutrum sed magna. Fusce et tincidunt diam. Suspendisse 
+		scelerisque convallis mauris non tincidunt.
+		</p>
+		<%= f.submit "Zarejestruj się", class: 'skin-background-color12 skin-font-color2 skin-background-hover6 font-11px bold' %>
+	</div>
+	<div class="one-fourth">
+		<span class="font-14px semibold main-subtitle">Adres e-mail</span>
+		<%= f.text_field :email, class: 'skin-background-color1 skin-font-color3', placeholder: "Wpissz adres e-mail" %>
+		<input name="user[email_confirmation]" type="text" id="register-email2" class="skin-background-color1 skin-font-color3" placeholder="Powtórz adres e-mail">
+	</div>
+	<div class="one-fourth last">
+		<span class="font-14px semibold main-subtitle">Hasło</span>
+
+		<%= f.password_field :password, class: "skin-background-color1 skin-font-color3", placeholder: "Wpisz hasło" %>
+		<input name="user[password_confirmation]" type="password" id="register-pass2" class="skin-background-color1 skin-font-color3" placeholder="Powtórz hasło">
+	</div>
+	<div class="three-fourth last">
+		<span class="bold skin-background-color7 skin-font-color2 register-alert register-completed">Rejestracja zakończona pomyślnie, e-mail aktywacyjny wysłany</span>
+	</div>
+<% end %>

@@ -42,7 +42,7 @@
 				
 				<% if current_user.id != @advertisment.user.id %>
 					
-					<% if is_user_not_offered @advertisment.offers %>
+					<% if is_user_not_offered? @advertisment.offers %>
 						
 						<li class="skin-border-color3">
 
@@ -59,10 +59,10 @@
 											
 											<%= f.text_area :content, class: "skin-font-color6 font font-11px bold", placeholder: "Treść ogłoszenia" %>
 											<div class="one-half">
-												<%= f.text_field :price, class: "skin-font-color6 font font-11px bold", placeholder: "Kwota" %>
+												<input class="skin-font-color6 font font-11px bold" placeholder="Kwota: do negocjacji" type="text" name="offer[price]" id="offer_price">
 											</div>
 											<div class="one-half last">
-												<%= f.text_field :realization, class: "skin-font-color6 font font-11px bold", placeholder: "Termin realizacji" %>
+												<input class="skin-font-color6 font font-11px bold" placeholder="Termin realizacji: do negocjacji" type="text" name="offer[realization]" id="offer_realization">
 											</div>
 											<input class="skin-background-color1 skin-background-hover4 skin-color-hover1 skin-font-color2 semibold font-11px" type="submit" value="Złóż oferte" />
 

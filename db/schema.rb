@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170109191902) do
+ActiveRecord::Schema.define(version: 20170111211001) do
 
   create_table "advertisments", force: :cascade do |t|
     t.string   "title"
@@ -50,12 +50,12 @@ ActiveRecord::Schema.define(version: 20170109191902) do
 
   create_table "offers", force: :cascade do |t|
     t.text     "content"
-    t.string   "price"
-    t.string   "realization"
+    t.string   "price",           default: "do negocjacji"
+    t.string   "realization",     default: "do negocjacji"
     t.integer  "advertisment_id"
     t.integer  "user_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.index ["advertisment_id"], name: "index_offers_on_advertisment_id"
     t.index ["user_id"], name: "index_offers_on_user_id"
   end
@@ -80,10 +80,10 @@ ActiveRecord::Schema.define(version: 20170109191902) do
     t.string   "name"
     t.string   "surname"
     t.string   "password_digest"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "email"
-    t.boolean  "verify"
+    t.boolean  "verify",          default: false
     t.integer  "avatar",          default: 1
   end
 
