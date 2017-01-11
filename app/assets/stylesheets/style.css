@@ -467,7 +467,7 @@ a:hover, a:active { outline: 0px none; }
 .user .user-info  a span { margin:0 auto; margin-top:-2px; display:table; }
 .user .user-info  .verified { float:left; }
 .user .user-info  .company { float:right; }
-.user .user-content { float:left; margin: -5px 0 0 0; }
+.user .user-content { float: left; margin: -5px 0 0 0; }
 
 .user .user-content li a:hover { text-decoration:underline; }
 

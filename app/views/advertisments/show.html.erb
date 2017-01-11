@@ -29,7 +29,7 @@
 							<a href="#" class="bold skin-font-color6 skin-color-hover4"><%= offer.user.name %></a>
 							<p><%= offer.content %></p>
 							<ul>
-								<li><span class="bold">Kwota:</span> <%= offer.price %> zł</li>
+								<li><span class="bold">Kwota:</span> <%= offer.price %></li>
 								<li><span class="bold">Czas realizacji:</span> <%= offer.realization %></li>
 							</ul>
 						</div>
@@ -42,24 +42,32 @@
 				
 				<% if current_user.id != @advertisment.user.id %>
 					
-					<% if ! is_user_offered @advertisment.offers %>
+					<% if is_user_not_offered @advertisment.offers %>
 						
 						<li class="skin-border-color3">
+
+							<%= render 'shared/validation_errors', object: @offer %>
+						
 							<div class="user">
 								<div class="user-info">
 									<%= image_tag "avatar/#{current_user.avatar}.jpg", data: {alt: "profile"} %>
 								</div>
+						
 								<div class="user-content skin-background-color5 add-offer">
-										<form method="post" class="add-offer-form">
-											<textarea type="text" class="skin-font-color6 font font-11px bold" placeholder="Treść ogłoszenia"></textarea>
+										
+										<%= form_for [@advertisment, @offer], :html => {class: 'add-offer-form'} do |f| %>
+											
+											<%= f.text_area :content, class: "skin-font-color6 font font-11px bold", placeholder: "Treść ogłoszenia" %>
 											<div class="one-half">
-												<input type="text" class="skin-font-color6 font font-11px bold" placeholder="Kwota: do uzgodnienia">
+												<%= f.text_field :price, class: "skin-font-color6 font font-11px bold", placeholder: "Kwota" %>
 											</div>
 											<div class="one-half last">
-												<input type="text" class="skin-font-color6 font font-11px bold" placeholder="Termin realizacji: do uzgodnienia">
+												<%= f.text_field :realization, class: "skin-font-color6 font font-11px bold", placeholder: "Termin realizacji" %>
 											</div>
 											<input class="skin-background-color1 skin-background-hover4 skin-color-hover1 skin-font-color2 semibold font-11px" type="submit" value="Złóż oferte" />
-										</form>
+
+										<% end %>
+
 								</div>
 							</div>
 						</li>
