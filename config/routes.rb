@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get '/rejestracja' => 'users#new'
+  get '/reset-hasla' => 'users#reset_password'
+  post '/recover' => 'users#recover_password'
+  get '/generate_new_password/:id' => 'users#generate_new_password', as: 'generate_new_password'
 
   resources :categories, only: [:show], :path => 'kategoria'
   resources :geolocations, only: [:show], :path => 'lokalizacja'
@@ -22,7 +25,6 @@ Rails.application.routes.draw do
 
   get '/panel' => 'panel/dashboards#cockpit'
 
-  
   namespace :panel do
     
     get '/logowanie' => 'sessions#new'
