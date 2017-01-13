@@ -89,11 +89,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
-    :port => 587,
-    :user_name => 'info@zlecenieit.herokuapp.com',
-    :password => '<dL5DSXn',
+    :port => 465,
+    :user_name => 'noreplay@zlecenieit.herokuapp.com',
+    :password => 'noreplay078258',
     :authentication => "plain"
-    #:enable_starttls_auto => true
+    :enable_starttls_auto => true
   }
   config.action_mailer.default_url_options = { :host => "zlecenieit.herokuapp.com" }
 end
