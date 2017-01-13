@@ -3,7 +3,7 @@
 
 <div class="offer-content">				
 	<div class="two-third">
-		<p><%= @advertisment.content %></p>
+		<p><%= simple_format @advertisment.content %></p>
 									
 		<span class="bold span-title">Oferty:</span>
 		
@@ -27,7 +27,7 @@
 						</div>
 						<div class="user-content">
 							<a href="#" class="bold skin-font-color6 skin-color-hover4"><%= offer.user.name %></a>
-							<p><%= offer.content %></p>
+							<p><%= simple_format offer.content %></p>
 							<ul>
 								<li><span class="bold">Kwota:</span> <%= offer.price %></li>
 								<li><span class="bold">Czas realizacji:</span> <%= offer.realization %></li>
