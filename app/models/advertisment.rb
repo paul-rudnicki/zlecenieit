@@ -24,7 +24,7 @@ class Advertisment < ApplicationRecord
   validates :price, :presence => { message: 'musi być ustawiony'}
   validates :realization, :presence => { message: 'musi być ustawiona'}, :on => :create
 
-  scope :active, -> { where(status: true, closed: false).order(created_at: :asc) }
+  scope :active, -> { where(status: true, closed: false).order(created_at: :desc) }
 
   def set_ended_date
     self.ended_date = Time.now + realization.to_i.days
