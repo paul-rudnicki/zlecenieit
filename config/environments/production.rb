@@ -92,7 +92,7 @@ Rails.application.configure do
     :port => 465,
     :user_name => 'noreplay@zlecenieit.herokuapp.com',
     :password => 'noreplay078258',
-    :authentication => "plain"
+    :authentication => "plain",
     :enable_starttls_auto => true
   }
   config.action_mailer.default_url_options = { :host => "zlecenieit.herokuapp.com" }
