@@ -91,8 +91,8 @@ Rails.application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => "zlecenieit.herokuapp.com",
-    :user_name => 'admin@zlecenieit.herokuapp.com',
-    :password => '3GMGKe&3',
+    :user_name => 'noreplay@zlecenieit.herokuapp.com',
+    :password => 'no078258',
     :authentication => :plain,
     :enable_starttls_auto => true,
   }
