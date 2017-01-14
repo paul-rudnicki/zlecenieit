@@ -88,10 +88,10 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :user_name => 'noreplay@zlecenieit.herokuapp.com',
-    :password => 'norepla078258',
+    :address => "smtp.yahoo.com",
+    :port => 465,
+    :user_name => 'zlecenieit@yahoo.com',
+    :password => 'yahoo078258',
     :authentication => :plain,
     :enable_starttls_auto => true
   }
