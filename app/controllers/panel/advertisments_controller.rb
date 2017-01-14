@@ -9,6 +9,7 @@ class Panel::AdvertismentsController < Panel::ApplicationController
   	@advertisment = Advertisment.new(strong_params)
   	@advertisment.user_id = current_user.id
     if @advertisment.save
+      AdvertismentsMailer.new_adverstisment_notify(@advertisment.title).deliver
       redirect_to panel_ogloszenia_path(status: 'waiting_mod'), notice: 'Dodano nowe ogłoszenie, które oczekuję na moderację'
     else
       flash[:alert] = 'Wystąpił problem z dodaniem nowego ogłoszenia'
