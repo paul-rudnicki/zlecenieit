@@ -92,8 +92,6 @@ Rails.application.configure do
     :port => 587,
     :user_name => 'noreplay@zlecenieit.herokuapp.com',
     :password => 'noreplay078258',
-    # :user_name => 'pawelrudnicki79@gmail.com',
-    # :password => 'rudnicki078258',
     :authentication => :plain,
     :enable_starttls_auto => true
   }
