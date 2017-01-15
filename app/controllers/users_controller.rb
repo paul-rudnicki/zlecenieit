@@ -5,6 +5,9 @@ class UsersController < ApplicationController
 	layout "recover", only: [:reset_password, :recover_password]
 
   def show
+    @user = User.find(params[:id])
+    @advertisment_count = @user.advertisments.where(status: true).count
+    @offers_count = @user.offers.count
   end
 
   def new

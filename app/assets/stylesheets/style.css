@@ -454,7 +454,7 @@ a:hover, a:active { outline: 0px none; }
 ****************************************************************************/
 
 .offer-content .offer-text p { margin: 0 0 20px 0; }
-.offer-content .offer-info ul { margin: 0 0 20px 0; }
+.offer-content .offer-info ul { margin: 0 0 0 0; }
 .offer-content .offer-info { border-width:2px; border-style:solid; padding:15px; }
 .offer-content .offer-info a { padding: 7px 15px; display: table; width:100%; text-align:center; margin: 10px 0 0 0; }
 .offer-content .offer-info .border { border-width:2px; border-style:solid; padding: 5px 15px; }

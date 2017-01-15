@@ -1,14 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :offers
-  # get 'users/show'
-
-  # get 'advertisments/show'
-
-  # get 'categories/show'
-
-  # get 'geolocations/show' as: 'kategoria'
-
   root 'pages#home'
 
   get '/rejestracja' => 'users#new'
@@ -21,7 +12,8 @@ Rails.application.routes.draw do
   resources :advertisments, only: [:show], :path => 'zlecenie' do
     resources :offers, only: [:new, :create]
   end
-  resources :users, only: [:show, :new, :create]
+
+  resources :users, only: [:show, :new, :create], :path => 'uzytkownik'
 
   get '/panel' => 'panel/dashboards#cockpit'
 

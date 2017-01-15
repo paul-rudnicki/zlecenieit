@@ -1,2 +1,47 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<span class="font-18px skin-font-color1 bold">Profil użytkownika</span>
+<span class="skin-font-color5 after-span bold">Informacje szczegółowe</span>
+
+<div class="offer-content">				
+	<div class="two-third">
+		<div class="profil-content">
+			<%= image_tag("avatar/#{@user.avatar}.jpg") %>
+			<div class="profil-name">
+				<span class="font-14px skin-font-color9 semibold"><%= @user.login %></span>
+				<span class="bold"><%= @user.email %></span>
+			</div>
+			<div class="clearfix"></div>
+			<ul>
+				<ul>
+					<li><span class="bold">Imię:</span> <%= print_value @user.name %></li>
+					<li><span class="bold">Nazwisko:</span> <%= print_value @user.surname %></li>
+				</ul>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+		<span class="bold span-title">O sobie:</span>
+		<p><%= simple_format(print_value(@user.description)) %></p>
+		
+	</div>
+	<div class="one-third last">
+		<div class="sticky-offer">
+			<div class="offer-info skin-border-color5 skin-background-color10">
+				<ul class="skin-font-color1">
+					<li><span class="bold">W serwisie od:</span> <%= date_issue @user.created_at %></li>
+					<li><span class="bold">Zweryfikowany:</span> <%= print_verfiy @user.verify %></li>
+					<li><span class="bold">Wystawione ogłoszenia:</span> <%= @advertisment_count %></li>
+					<li><span class="bold">Złożone oferty:</span> <%= @offers_count %></li>
+				</ul>
+			</div>
+		</div>
+		<div class="added-by">
+			<span class="bold span-title">Akcje:</span>
+			<div class="user">
+				<div class="user-content">
+					<ul>
+						<li><span>- </span><a href="#" class="skin-font-color6">Inne aukcje użytkownika (<%= @advertisment_count %>)</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -12,7 +12,6 @@
 			<% if ! current_user %>
 				<%= link_to "Zaloguj się by złożyć ofertę", panel_logowanie_path, class: 'skin-font-color2 skin-background-color1 skin-background-hover6' %>
 			<% end %>
-			<a href="#" class="skin-font-color1 skin-background-hover7 bold border skin-border-color4 skin-color-hover6">Wyślij pytanie</a>
 
 		</div>
 	</div>
@@ -30,7 +29,6 @@
 						<%= link_to "Zobacz profil", user_path(@advertisment.user.id), class: 'skin-font-color6' %>
 					</li>
 					<li><span>- </span><a href="#" class="skin-font-color6">Inne zlecenia użytkownika (0)</a></li>
-					<li><span>- </span><a href="#" class="skin-font-color6">Wyślij pytanie</a></li>
 				</ul>
 			</div>
 		</div>

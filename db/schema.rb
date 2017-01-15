@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113173913) do
+ActiveRecord::Schema.define(version: 20170115162536) do
 
   create_table "advertisments", force: :cascade do |t|
     t.string   "title"
@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 20170113173913) do
     t.boolean  "verify",          default: true
     t.integer  "avatar",          default: 1
     t.string   "confirmation"
+    t.string   "login"
+    t.text     "description"
   end
 
 end
