@@ -293,10 +293,17 @@ a:hover, a:active { outline: 0px none; }
 .radious-5px { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
 
 .pagination { margin:0 auto; display:table; margin-top:50px; }
-.pagination ul li { float:left; margin: 0 3px; }
+/*.pagination ul li { float:left; margin: 0 3px; }
 .pagination ul li a { padding: 5px 0; width:34px; text-align:center; display:table; }
 .pagination ul li span.current { padding: 5px 0; width:34px; text-align:center; display:table; }
 .pagination ul li:first-child > a, .pagination ul li:last-child > a { width:auto; margin: 0 10px; }
+*/
+.pagination nav span { float:left; margin: 0 3px; display: inline-block; }
+.pagination nav span a { border-radius: 5px; padding: 5px 0; background-color: #1d1d33; color: #fff; width:34px; text-align:center; display:table; }
+.pagination nav span.current {border-radius: 5px; color: #fff;  background-color: #55a3d4; padding: 5px 0; width:34px; text-align:center; display:table; }
+.pagination nav span.first a,  .pagination nav span.next a, 
+.pagination nav span.prev a, .pagination nav span.last a {font-family: 'OpenSansBoldItalic', Arial, Helvetica,sans-serif; color: #4e4e4e; background: transparent; width:auto; margin: 0 5px; }
+
 
 .bottom { margin: 50px 0 0 0; display:table; width:100%; }
 .bottom .one-half { padding: 50px 0; display:table; }
