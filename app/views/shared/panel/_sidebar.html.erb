@@ -38,19 +38,19 @@
 				</ul>
 			</li>
 			<li class="skin-border-color5">
-				<%= link_to "Profil wykonawcy", panel_profil_path, class: 'skin-font-color1 skin-background-hover8' %>
+				<%= link_to "Ustawienia konta", edit_panel_user_path(current_user), class: 'skin-font-color1 skin-background-hover8' %>
 			</li>
 			<li class="skin-border-color5">
-				<%= link_to "Ustawienia konta", panel_ustawienia_path, class: 'skin-font-color1 skin-background-hover8' %>
+				<%= link_to "Profil wykonawcy", user_path(current_user), class: 'skin-font-color1 skin-background-hover8' %>
 			</li>
-			<li class="skin-border-color5">
-				<%= link_to "Weryfikacja", panel_weryfikacja_path, class: 'skin-font-color1 skin-background-hover8' %>
-			</li>
+			<!-- <li class="skin-border-color5">
+				<%#= link_to "Weryfikacja", panel_weryfikacja_path, class: 'skin-font-color1 skin-background-hover8' %>
+			</li> -->
 		</ul>
 	</div>
-	<div class="sidebar">
+	<!-- <div class="sidebar">
 		<span class="font-18px skin-font-color1 bold">Pomoc</span>
 		<p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae urna augue. Fusce eget ligula ligula. Nulla auctor mauris non quam congue iaculis. Nulla imperdiet sit amet ipsum et euismod. Mauris dapibus lacus in urna tempus, et vestibulum urna varius.</p>
-	</div>
+	</div> -->
 </div>

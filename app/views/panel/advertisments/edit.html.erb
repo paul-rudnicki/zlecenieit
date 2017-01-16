@@ -3,7 +3,7 @@
 	
 	<%= render 'validation_errors', object: @advertisment %>
 
-	<%= form_for [:panel, @advertisment], class: 'add-new-commission' do |f| %>
+	<%= form_for [:panel, @advertisment], :html => { class: 'add-new-commission' } do |f| %>
 		<span class="skin-font-color15 font-14px semibold">ZLECENIE:</span><span class="font-14px semibold main-subtitle">Tytuł ogłoszenia</span>
 		<span class="panel-content-error skin-background-color12 skin-font-color2 bold error-1">Podaj tytuł</span>
 		<%= f.text_field :title, class: 'skin-background-color1 skin-font-color3', placeholder: 'Tytuł ogłoszenia' %>

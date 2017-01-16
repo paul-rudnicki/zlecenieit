@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115162536) do
+ActiveRecord::Schema.define(version: 20170116200256) do
 
   create_table "advertisments", force: :cascade do |t|
     t.string   "title"
@@ -88,6 +88,10 @@ ActiveRecord::Schema.define(version: 20170115162536) do
     t.string   "confirmation"
     t.string   "login"
     t.text     "description"
+    t.string   "phone"
+    t.string   "skype"
+    t.string   "city"
+    t.string   "province"
   end
 
 end

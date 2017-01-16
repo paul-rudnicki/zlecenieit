@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :panel do
+    get 'users/edit'
+  end
+
+  namespace :panel do
+    get 'users/update'
+  end
+
   root 'pages#home'
 
   get '/rejestracja' => 'users#new'
@@ -26,7 +34,7 @@ Rails.application.routes.draw do
     get '/ogloszenia' => 'dashboards#advertisments'
     get '/oferty' => 'dashboards#offers'
     get '/profil' => 'dashboards#profil'
-    get '/ustawienia' => 'dashboards#settings'
+    # get '/ustawienia' => 'dashboards#settings'
     get '/weryfikacja' => 'dashboards#verify'
 
     get '/dodaj-ogloszenie' => 'advertisments#new'
@@ -36,6 +44,7 @@ Rails.application.routes.draw do
     resources :sessions, only: [:new, :create, :destroy]
     resources :advertisments, only: [:new, :create, :edit, :update]
     resources :offers, only: [:destroy]
+    resources :users, only: [:edit, :update], :path => 'ustawienia'
 
   end
 

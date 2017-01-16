@@ -1,0 +1,35 @@
+<div class="three-fourth main-text panel-content last">
+
+	<span class="font-18px skin-font-color1 bold">Ustawienia konta</span>
+
+	<%= form_for [:panel, @user], :html => { class: "account-settings" }  do |f| %>
+
+		<span class="font-14px semibold main-subtitle">Dodatkowe dane użytkownika</span>
+
+		<div class="clearfix"></div>
+
+		<div class="one-third">
+			<%= f.text_field :name, id: 'account-settings-name', class: 'skin-background-color1 skin-font-color3', placeholder: 'Imię' %>
+			<%= f.text_field :surname, id: 'account-settings-surname', class: 'skin-background-color1 skin-font-color3', placeholder: 'Nazwisko' %>
+		</div>
+		<div class="one-third">
+			<%= f.text_field :phone, id: 'account-settings-phone', class: 'skin-background-color1 skin-font-color3', placeholder: 'Telefon' %>
+			<%= f.text_field :skype, id: 'account-settings-skype', class: 'skin-background-color1 skin-font-color3', placeholder: 'Skype' %>
+		</div>
+		<div class="one-third last">
+			<%= f.text_field :city, id: 'account-settings-town', class: 'skin-background-color1 skin-font-color3', placeholder: 'Miasto' %>
+			<%= f.text_field :province, id: 'account-settings-province', class: 'skin-background-color1 skin-font-color3', placeholder: 'Województwo' %>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<span class="font-14px semibold main-subtitle">Treść</span>
+		<%= f.text_area :description, id: 'account-settings-textarea', class: 'skin-background-color1 skin-font-color3', placeholder: 'Informacje profilowe' %>
+
+		<div class="skin-background-color5 line-break"></div>
+
+		<input type="submit"  value="Zmień ustawienia" class="skin-background-color12 skin-font-color2 skin-background-hover6 font-11px bold"/>
+
+	<% end %>
+
+</div>

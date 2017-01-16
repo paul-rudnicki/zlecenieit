@@ -5,11 +5,11 @@
 			<span class="skin-font-color2 font-14px semibold">Ogłoszenia wystawione przez ciebie</span>
 		</div>
 		<ul class="cockpit-menu">
-			<li><a href="#" class="skin-border-color6 skin-background-hover9 skin-font-color6 skin-color-hover6 bold">Aktywne: <%= @active_advertisments_count %></a><li>
-			<li><a href="#" class="skin-border-color6 skin-background-hover9 skin-font-color6 skin-color-hover6 bold">Oczekujące na zwycięzcę: <%= @wating_advertisments_count %></a><li>
+			<li><a class="skin-border-color6 skin-background-hover9 skin-font-color6 skin-color-hover6 bold">Aktywne: <%= @active_advertisments_count %></a><li>
+			<li><a class="skin-border-color6 skin-background-hover9 skin-font-color6 skin-color-hover6 bold">Oczekujące na zwycięzcę: <%= @wating_advertisments_count %></a><li>
 			<li>
-				<%= link_to panel_ogloszenia_path(status: 'ended'), class: 'skin-border-color6 skin-background-hover9 skin-font-color6 skin-color-hover6 bold' do %>Zakończone: <%= @ended_advertisments_count %>
-				<% end %>
+				<a class="skin-border-color6 skin-background-hover9 skin-font-color6 skin-color-hover6 bold">Zakończone: <%= @ended_advertisments_count %>
+				</a>
 				<li>
 		</ul>
 	</div>
@@ -18,9 +18,9 @@
 			<span class="skin-font-color2 font-14px semibold">Ogłoszenia ,w których licytujesz</span>
 		</div>
 		<ul class="cockpit-menu">
-			<li><a href="#" class="skin-border-color7 skin-background-hover10 skin-font-color6 skin-color-hover6 bold">Aktywne: 2</a><li>
-			<li><a href="#" class="skin-border-color7 skin-background-hover10 skin-font-color6 skin-color-hover6 bold">Oczekujące na zwycięzcę: 2</a><li>
-			<li><a href="#" class="skin-border-color7 skin-background-hover10 skin-font-color6 skin-color-hover6 bold">Zakończone: 2</a><li>
+			<li><a class="skin-border-color7 skin-background-hover10 skin-font-color6 skin-color-hover6 bold">Aktywne: <%= @active_offers_count %></a><li>
+			<li><a class="skin-border-color7 skin-background-hover10 skin-font-color6 skin-color-hover6 bold">Oczekujące na zwycięzcę: <%= @waiting_offers_count %></a><li>
+			<li><a class="skin-border-color7 skin-background-hover10 skin-font-color6 skin-color-hover6 bold">Zakończone: <%= @ended_offers_count %></a><li>
 		</ul>
 	</div>
 	<div class="one-third last">

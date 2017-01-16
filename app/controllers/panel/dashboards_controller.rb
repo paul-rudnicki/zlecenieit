@@ -3,6 +3,11 @@ class Panel::DashboardsController < Panel::ApplicationController
     @active_advertisments_count = active_advertisments.count
     @wating_advertisments_count = waiting_winner_advertisments.count
     @ended_advertisments_count = ended_advertisments.count
+
+    @active_offers_count = active_offers_count.count
+    @waiting_offers_count = waiting_winner_offers_count.count
+    @ended_offers_count = ended_offers.count
+
   end
 
   def advertisments
@@ -61,6 +66,21 @@ class Panel::DashboardsController < Panel::ApplicationController
   end
 
   private
+
+  def active_offers_count
+    Advertisment.joins(:offers).where(offers: {user_id: session[:user_id]})
+      .where(closed: false)
+  end
+
+  def waiting_winner_offers_count
+    Advertisment.joins(:offers).where(offers: {user_id: session[:user_id]})
+      .where(closed: true).where(winner: nil) 
+  end
+
+  def ended_offers_count
+    Advertisment.joins(:offers).where(offers: {user_id: session[:user_id]})
+      .where(closed: true).where.not(winner: nil)
+  end
 
   def active_offers
     Advertisment.joins(:offers).where(offers: {user_id: session[:user_id]})
