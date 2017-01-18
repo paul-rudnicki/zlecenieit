@@ -5,6 +5,13 @@
 	<div class="two-third">
 		<p><%= simple_format @advertisment.content %></p>
 									
+		<% if @advertisment.closed %>
+			<div class="offer-ended skin-background-color1 skin-font-color2">
+				<p class="font-16px">Aukcja zakończona. Zwycięzca: <span class="semibold">brak</span></p>
+				<span>Dziękujemy za złożone oferty. By zobaczyć nowo dodane zlecenia przejdź na <%= link_to "stronę główną", root_path, class: 'skin-font-color3 skin-color-hover2' %></span>
+			</div>
+		<% end %>
+
 		<span class="bold span-title">Oferty:</span>
 		
 		<ul class="offers">
@@ -44,34 +51,37 @@
 					
 					<% if is_user_not_offered? @advertisment.offers %>
 						
-						<li class="skin-border-color3">
+						<% if ! @advertisment.closed %>
+							
+							<li class="skin-border-color3">
 
-							<%= render 'shared/validation_errors', object: @offer %>
-						
-							<div class="user">
-								<div class="user-info">
-									<%= image_tag "avatar/#{current_user.avatar}.jpg", data: {alt: "profile"} %>
-								</div>
-						
-								<div class="user-content skin-background-color5 add-offer">
-										
-										<%= form_for [@advertisment, @offer], :html => {class: 'add-offer-form'} do |f| %>
+								<%= render 'shared/validation_errors', object: @offer %>
+							
+								<div class="user">
+									<div class="user-info">
+										<%= image_tag "avatar/#{current_user.avatar}.jpg", data: {alt: "profile"} %>
+									</div>
+							
+									<div class="user-content skin-background-color5 add-offer">
 											
-											<%= f.text_area :content, class: "skin-font-color6 font font-11px bold", placeholder: "Treść ogłoszenia" %>
-											<div class="one-half">
-												<input class="skin-font-color6 font font-11px bold" placeholder="Kwota: do negocjacji" type="text" name="offer[price]" id="offer_price">
-											</div>
-											<div class="one-half last">
-												<input class="skin-font-color6 font font-11px bold" placeholder="Termin realizacji: do negocjacji" type="text" name="offer[realization]" id="offer_realization">
-											</div>
-											<input class="skin-background-color1 skin-background-hover4 skin-color-hover1 skin-font-color2 semibold font-11px" type="submit" value="Złóż oferte" />
+											<%= form_for [@advertisment, @offer], :html => {class: 'add-offer-form'} do |f| %>
+												
+												<%= f.text_area :content, class: "skin-font-color6 font font-11px bold", placeholder: "Treść ogłoszenia" %>
+												<div class="one-half">
+													<input class="skin-font-color6 font font-11px bold" placeholder="Kwota: do negocjacji" type="text" name="offer[price]" id="offer_price">
+												</div>
+												<div class="one-half last">
+													<input class="skin-font-color6 font font-11px bold" placeholder="Termin realizacji: do negocjacji" type="text" name="offer[realization]" id="offer_realization">
+												</div>
+												<input class="skin-background-color1 skin-background-hover4 skin-color-hover1 skin-font-color2 semibold font-11px" type="submit" value="Złóż oferte" />
 
-										<% end %>
+											<% end %>
 
+									</div>
 								</div>
-							</div>
-						</li>
-
+							</li>
+						
+						<% end %>
 					<% end %>
 				<% end %>
 			<% end %>

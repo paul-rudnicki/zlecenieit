@@ -6,7 +6,11 @@
 				<li><span class="bold">Budżet:</span> <%= @advertisment.price %> zł</li>
 				<li><span class="bold">Ilość ofert: </span> <%= advertisment_offers_count @advertisment %></li>
 				<li><span class="bold">Wystawione:</span> <%= date_issue @advertisment.created_at %></li>
-				<li><span class="bold">Do końca:</span> 7 dni</li>
+				<% if @advertisment.closed %>
+					<a class="skin-font-color2 skin-background-color1 bold">Aukcja zakończona</a>
+				<% else %>
+					<li><span class="bold">Do końca:</span> <%= to_end @advertisment %></li>
+				<% end %>
 			</ul>
 
 			<% if ! current_user %>
