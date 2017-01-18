@@ -3,7 +3,6 @@ class OffersController < ApplicationController
 		advertisment = Advertisment.friendly.find(params[:advertisment_id])
 		@offer = advertisment.offers.new(strong_params)
 		@offer.user_id = session[:user_id]
-		byebug
 		if @offer.save
 			redirect_to advertisment_path(advertisment), notice: "Dodano nową ofertę"
 		else
