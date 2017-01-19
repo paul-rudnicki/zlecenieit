@@ -11,9 +11,9 @@
 						<%= advertisment.geolocation.name %>
 					</span>
 					<span class="bold">Budżet: </span><span class="second-span"><%= advertisment.price %> zł</span> 
-					<span class="bold">Zakończone: </span><span class="second-span"><%= advertisment.ended_date.strftime('%Y-%m-%d') %></span>
+					<span class="bold">Zakończone: </span><span class="second-span"><%= advertisment.ended_date.strftime('%d-%m-%Y') %>r.</span>
 				</div>
-				<a href="#" class="button skin-font-color2 skin-background-color9 skin-background-hover1 bold">Zobacz ogłoszenie</a>
+				<%= link_to "Zobacz ogłoszenie", advertisment_path(advertisment), class: "button skin-font-color2 skin-background-color9 skin-background-hover1 bold" %>
 			</li>
 		<% end %>
 	</ul>

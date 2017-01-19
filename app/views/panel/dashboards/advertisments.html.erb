@@ -13,6 +13,8 @@
 		<%= render 'advertisments_active', object: @advertisments %>
 	<% end %>
 
-	<%= paginate @advertisments %>
+	<div class="pagination">
+		<%= paginate @advertisments %>
+	</div>
 	
 </div>

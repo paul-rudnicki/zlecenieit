@@ -1,0 +1,34 @@
+<div class="three-fourth main-text panel-content last">
+	<span class="font-18px skin-font-color1 bold">Zakończ ogłoszenie</span>
+
+		<div class="ad-prev">
+			<span class="skin-font-color15 semibold font-12px">Zlecenie: </span><span class="semibold font-12px"><%= @advertisment.title %></span>
+			<div class="meta-info">
+				<span class="bold">Kategoria: </span><span class="second-span"><%= @advertisment.category.name %></span>
+				<span class="bold">Lokalizacja: </span><span class="second-span"><%= @advertisment.geolocation.name %></span>
+				<span class="bold">Wynagrodzenie: </span><span class="second-span"><%= @advertisment.price %> zł</span> 	 
+				<span class="bold">Wystawione: </span><span class="second-span"><%= date_issue @advertisment.created_at %></span> 
+				<span class="bold">Do końca: </span><span class="second-span"><%= to_end @advertisment %></span>
+				<span class="bold">Ilość ofert: </span><span class="second-span"><%= @advertisment.offers.count %></span>
+			</div>
+			<%= form_tag panel_save_winner_path(@advertisment), class: 'end-ad' do %>
+				<span class="font-14px semibold main-subtitle">Wybierz zwycięzcę i zakończ przed czasem</span>
+				<div class="one-half">
+
+					<select name="user" class="skin-background-color1 skin-font-color3">
+					  <!-- <option value="choose">Wybierz zwycięzcę (opcja)</option> -->
+						<%= options_for_select(@users) %>
+					</select>
+					<%#= select_tag 'offer[user]', options_from_collection_for_select(@users) %>
+					  <!-- <option value="1">Nie wybieraj</option>
+					  <option value="2">wtxinc</option>
+					  <option value="3">pawelrud</option> -->
+				</div>
+				<div class="one-half last">
+					<button type="submit" href="#" class="button skin-font-color2 skin-background-color12 skin-background-hover1 bold">Zakończ</button>
+					<%= link_to "Anuluj", panel_ogloszenia_path(status: 'waiting_winner'), class: 'button skin-font-color2 skin-background-color3 skin-background-hover1 bold ' %>
+				</div>
+			<% end %>
+		</div>
+
+</div>

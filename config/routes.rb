@@ -34,12 +34,15 @@ Rails.application.routes.draw do
     get '/ogloszenia' => 'dashboards#advertisments'
     get '/oferty' => 'dashboards#offers'
     get '/profil' => 'dashboards#profil'
-    # get '/ustawienia' => 'dashboards#settings'
+
     get '/weryfikacja' => 'dashboards#verify'
 
     get '/dodaj-ogloszenie' => 'advertisments#new'
 
-    # get '/zakoncz' => 'dashboards#finish'
+    get '/zakoncz/:id' => 'dashboards#finish', as: 'zakoncz'
+
+    get '/wybierz-zwyciezce/:id' => 'dashboards#choose_winner', as: 'choose_winner'
+    post '/zapisz-zwyciezce/:id' => 'dashboards#save_winner', as: 'save_winner'
 
     resources :sessions, only: [:new, :create, :destroy]
     resources :advertisments, only: [:new, :create, :edit, :update]

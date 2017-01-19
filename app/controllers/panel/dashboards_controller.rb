@@ -65,6 +65,40 @@ class Panel::DashboardsController < Panel::ApplicationController
   def verify
   end
 
+  def choose_winner
+  	@advertisment = Advertisment.friendly.find(params[:id])
+  	
+  	@offers = @advertisment.offers.all
+  	@users = Array.new
+  	@offers.each do |offer|
+  		@users << ["#{offer.user.email} - #{offer.user.name}", offer.user.id]
+  	end
+  end
+
+  def save_winner
+  	advertisment = Advertisment.friendly.find(params[:id])
+  	if advertisment
+  		user_id = params[:user].to_i
+  		advertisment.winner = user_id
+  		advertisment.save
+  		redirect_to panel_ogloszenia_path(status: 'ended'), notice: 'Zwycięzca został wybrany.'
+  	else
+  		redirect_to panel_ogloszenia_path(status: 'waiting_winner'), alert: 'Zwycięzca nie został zapisany poprawnie.'
+  	end
+  end
+
+  def finish
+    advertisment = Advertisment.friendly.find(params[:id])
+    if advertisment
+      advertisment.closed = true
+      #advertisment.ended_date = DateTime.now
+      advertisment.save
+      redirect_to panel_ogloszenia_path(status: 'waiting_winner'), notice: 'Ogłoszenie zostało zamkięte.'
+    else
+      redirect_to panel_ogloszenia_path, alert: 'Błąd - ogłoszenie nie zostało zamknięte'
+    end
+  end
+
   private
 
   def active_offers_count

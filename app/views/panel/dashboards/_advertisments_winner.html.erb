@@ -2,21 +2,10 @@
 <ul class="ad-list">
 	<% @advertisments.each do |advertisment| %>
 	<li class="ad-prev">
-		<span class="skin-font-color15 semibold font-12px">Zlecenie: </span><span class="semibold font-12px"><%= advertisment.title %></span>
-		<div class="meta-info">
-			<span class="bold">Kategorie: </span><span class="second-span">
-			<%= advertisment.category.name %>
-			</span>
-			<span class="bold">Lokalizacja: </span><span class="second-span">
-				<%= advertisment.geolocation.name %>
-			</span>
-			<span class="bold">Budżet: </span><span class="second-span"><%= advertisment.price %> zł</span>
-			<span class="bold">Wystawione: </span><span class="second-span"><%= date_issue advertisment.created_at %></span>  
-			<span class="bold">Do końca: </span><span class="second-span"><%= days_to_left advertisment %></span>
-			<span class="bold">Ilość ofert: </span><span class="second-span"><%= advertisment.offers.count %></span>
-		</div>
-		<a href="#" class="button skin-font-color2 skin-background-color14 skin-background-hover1 bold">Zobacz ogłoszenie</a>
-		<a href="#" class="button skin-font-color2 skin-background-color3 skin-background-hover1 bold">Wybierz zwycięzcę</a>
+
+		<%= render 'panel/dashboards/advertisments/list', advertisment: advertisment %>
+
+		<%= link_to "Wybierz zwycięzcę", panel_choose_winner_path(advertisment), class: 'button skin-font-color2 skin-background-color3 skin-background-hover1 bold' %>
 	</li>
 	<% end %>
 </ul>
